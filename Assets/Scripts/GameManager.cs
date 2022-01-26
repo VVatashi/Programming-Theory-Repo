@@ -7,6 +7,7 @@ using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
+    // ENCAPSULATION
     public static GameManager instance { get; private set; }
 
     private void Start()
@@ -21,11 +22,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // ABSTRACTION
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
     }
 
+    // ABSTRACTION
     public void QuitGame()
     {
 #if UNITY_EDITOR
